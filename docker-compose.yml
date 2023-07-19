@@ -8,5 +8,5 @@ services:
       - "3000"
     volumes:
       - app-data:/app/public/images
- volumes:
+volumes:
   app-data:
