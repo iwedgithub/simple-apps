@@ -11,5 +11,18 @@ pipeline {
                sh 'npm install'
             }
         }
+        stage('Run Test') {
+            paralel {
+                 stage('Unit Test') {
+                    steps {
+                        echo 'Unit Test'
+                    }
+                }
+                stage('Code Review') {
+                    steps {
+                        echo 'Code Review'
+                    }
+                }
+            }
+        }
     }
-}
