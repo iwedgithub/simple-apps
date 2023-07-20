@@ -15,7 +15,8 @@ pipeline {
             parallel {
                  stage('Unit Test') {
                     steps {
-                        echo 'Unit Test'
+                        sh '''npm test
+                        npm run test:coverage'''
                     }
                 }
                 stage('Code Review') {
