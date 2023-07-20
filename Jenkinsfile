@@ -26,5 +26,10 @@ pipeline {
                 }
             }
         }
+        stage('Build Image') {
+            steps {
+               sh 'docker compose build'
+            }
+        }
     }
 }
