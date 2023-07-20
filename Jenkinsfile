@@ -36,5 +36,10 @@ pipeline {
                sh 'docker compose push'
             }
         }
+        stage('Deploy Apps') {
+            steps {
+               sh 'docker compose up -d'
+            }
+        }
     }
 }
